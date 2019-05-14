@@ -8,6 +8,8 @@ To run the FAQ project
 
 3. Copy .env.example to .env
 
+4. php artisan key:generate
+
 4. Setup database / with sqlite or other [https://laravel.com/docs/5.8/database](https://laravel.com/docs/5.8/database) 
 
 5. Run: php artisan migrate
