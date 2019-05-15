@@ -34,6 +34,13 @@ Route::patch('/question/{question_id}/answer/{answer_id}', 'AnswerController@upd
 Route::delete('/question/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answer.destroy');
 
 
+Route::get('/question/{question_id}/tag/create', 'TagController@create')->name('tag.create');
+Route::get('/question/{question_id}/tag/{tag_id}', 'TagController@show')->name('tag.show');
+Route::get('/question/{question_id}/tag/{tag_id}/edit', 'TagController@edit')->name('tag.edit');
+Route::post('/question/{question_id}/tag/', 'TagController@store')->name('tag.store');
+Route::patch('/question/{question_id}/tag/{tag_id}', 'TagController@update')->name('tag.update');
+Route::delete('/question/{question_id}/tag/{tag_id}', 'TagController@destroy')->name('tag.destroy');
+
 Route::resources([
     'question' => 'QuestionController',
 ]);
