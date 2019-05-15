@@ -76,4 +76,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Answer');
     }
+
+    public function tags()
+    {
+        return $this->hasMany('App\Tag');
+    }
 }
